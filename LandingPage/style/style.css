@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Seletor Universal */
+/* Realizar antes de tudo */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header-flex{
+    height: 60px;
+    width: 100%;
+    background-color: #F9003D;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.nav-flex{
+    width: 40%;
+    display: flex;
+}
+
+.ul-flex{
+    display: flex;
+    /* alinhamento horizontal */
+    justify-content: space-evenly;
+    /* alinhamento vertical */
+    align-items: center;
+    width: 100%;
+
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.banner{
+    background-image: url(../assets/images/imagem-fundo-banner\ 1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.text-flex{
+    width: 500px;
+    height: 400px;
+    margin-left: 60px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.text-flex>img
+{
+    height: 400px;
+    width: 80px;
+}
+
+.text-flex>h1{
+    font-size: 70px;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: left;
+}
+
+hr{
+    border: 1px solid #FFAF00;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.text-flex>h2{
+    font-size: 40px;
+    color: #F9003D;
+    font-family: "Bebas Neue", sans-serif;
+    text-transform: uppercase;
+}
