@@ -1,87 +1,146 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 /* Seletor Universal */
 /* Realizar antes de tudo */
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.header-flex{
-    height: 60px;
-    width: 100%;
-    background-color: #F9003D;
+.container-grid {
+  margin: 0 auto;
+  max-width: 1000px;
 
-    display: flex;
-    justify-content: flex-end;
+  border: 2px solid white;
 }
 
+.header-flex {
+  height: 60px;
+  width: 100%;
+  background-color: #f9003d;
 
-.nav-flex{
-    width: 40%;
-    display: flex;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.ul-flex{
-    display: flex;
-    /* alinhamento horizontal */
-    justify-content: space-evenly;
-    /* alinhamento vertical */
-    align-items: center;
-    width: 100%;
+.nav-flex {
+  width: 100%;
+  display: flex;
 
-    list-style-type: none;
+  justify-content: end;
 }
 
-a{
-    text-decoration: none;
-    color: white;
-    font-family: "Bebas Neue", sans-serif;
+.ul-flex {
+  display: flex;
+  /* alinhamento horizontal */
+  justify-content: space-evenly;
+  /* alinhamento vertical */
+  align-items: center;
+  width: 40%;
+
+  list-style-type: none;
 }
 
-.banner{
-    background-image: url(../assets/images/imagem-fundo-banner\ 1.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 600px;
-    display: flex;
-    align-items: center;
+a {
+  text-decoration: none;
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
 }
 
-.text-flex{
-    width: 500px;
-    height: 400px;
-    margin-left: 60px;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
-.text-flex>img
-{
-    height: 400px;
-    width: 80px;
+.banner {
+  background-image: url(../assets/images/imagem-fundo-banner\ 1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px;
+  display: flex;
+  align-items: center;
 }
 
-.text-flex>h1{
-    font-size: 70px;
-    color: white;
-    font-family: "Bebas Neue", sans-serif;
-    text-align: left;
+.text-flex {
+  width: 100%;
+  height: 400px;
+
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
-hr{
-    border: 1px solid #FFAF00;
-    width: 80%;
-    margin-bottom: 10px;
+.text-flex > img {
+  height: 400px;
+  width: 80px;
 }
 
-.text-flex>h2{
-    font-size: 40px;
-    color: #F9003D;
-    font-family: "Bebas Neue", sans-serif;
-    text-transform: uppercase;
+.text-flex > h1 {
+  font-size: 70px;
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: left;
+}
+
+hr {
+  border: 1px solid #ffaf00;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.text-flex > h2 {
+  font-size: 40px;
+  color: #f9003d;
+  font-family: "Bebas Neue", sans-serif;
+  text-transform: uppercase;
+}
+
+/* seção para realizar a estilização de projetos */
+
+.section-projects {
+  background-color: #080324;
+}
+
+.section-projects > h1 {
+  font-size: 40px;
+  color: #f9003d;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 2px;
+}
+
+.flex-info {
+  display: flex;
+  justify-content: space-between;
+
+  border: 2px solid white;
+  width: 100%;
+}
+
+.info-style {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  color: white;
+
+  gap: 20px;
+  justify-content: center;
+}
+
+.info-style > h4 {
+  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+.info-style > h2 {
+  font-size: 40px;
+  font-family: "Bebas Neue", sans-serif;
+  color: #ffaf00;
+  letter-spacing: 2px;
+}
+
+.info-style > p {
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  text-align: justify;
+  margin-right: 10px;
 }
