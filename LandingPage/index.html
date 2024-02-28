@@ -1,79 +1,146 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./style/style.css" />
-    <title>Landing Page</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <body>
-    <header class="header-flex">
-      <nav class="nav-flex container-grid">
-        <ul class="ul-flex">
-          <li>
-            <a href="#">Início</a>
-          </li>
-          <li>
-            <a href="#">Sobre</a>
-          </li>
-          <li>
-            <a href="#">Desafios</a>
-          </li>
-          <li>
-            <a href="#">Endereço</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="banner">
-        <article class="text-flex container-grid">
-          <h1>Desenvolvimento Front-End 2024</h1>
+  <link rel="stylesheet" href="./style/style.css" />
+  <title>Landing Page</title>
+</head>
 
-          <hr />
+<body>
+  <header class="header-flex">
+    <nav class="nav-flex container-grid">
+      <ul class="ul-flex">
+        <li>
+          <a href="#">Início</a>
+        </li>
+        <li>
+          <a href="#">Sobre</a>
+        </li>
+        <li>
+          <a href="#">Desafios</a>
+        </li>
+        <li>
+          <a href="#">Endereço</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="banner">
+      <article class="text-flex container-grid">
+        <h1>Desenvolvimento Front-End 2024</h1>
 
-          <h2>
-            <!-- <xmp> ford <Enter/> </xmp> -->
-            Ford &ltEnter/&gt
-          </h2>
+        <hr />
 
-          <img src="./assets/icons/mouse-down 1.svg" alt="" />
-        </article>
-      </section>
+        <h2>
+          <!-- <xmp> ford <Enter/> </xmp> -->
+          Ford &ltEnter/&gt
+        </h2>
 
-      <!-- responsável pelos projetos -->
-      <section class="section-projects">
-        <section class="container-grid">
-          <h1>Sobre os projetos</h1>
+        <img src="./assets/icons/mouse-down 1.svg" alt="" />
+      </article>
+    </section>
 
-          <section class="flex-info">
-            <img src="./assets/images/imagem-seção-sobre 1.png" alt="" />
+    <!-- responsável pelos projetos -->
+    <section class="section-projects">
+      <section class="section-projects__style container-grid">
+        <h1>Sobre os projetos</h1>
 
-            <article class="info-style">
-              <h4>Participantes</h4>
+        <section class="flex-info">
+          <img src="./assets/images/imagem-seção-sobre 1.png" alt="" />
 
-              <h2>
-                Mais de 80 alunos <br />
-                organizados em 16 grupos!
-              </h2>
+          <article class="info-style">
+            <h4>Participantes</h4>
 
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Eligendi veniam voluptas, perspiciatis fugit in, sunt, dolores
-                inventore similique aspernatur explicabo nobis sint consequatur
-                ullam laborum accusamus numquam qui reprehenderit quos. Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Commodi magni
-                iste provident placeat dolore maiores, corporis distinctio vitae
-                voluptate labore voluptas? Quaerat minima rem quibusdam velit
-                dolorem suscipit non amet?
-              </p>
-            </article>
-          </section>
+            <h2>
+              Mais de 80 alunos <br />
+              organizados em 16 grupos!
+            </h2>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Eligendi veniam voluptas, perspiciatis fugit in, sunt, dolores
+              inventore similique aspernatur explicabo nobis sint consequatur
+              ullam laborum accusamus numquam qui reprehenderit quos. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Commodi magni
+              iste provident placeat dolore maiores, corporis distinctio vitae
+              voluptate labore voluptas? Quaerat minima rem quibusdam velit
+              dolorem suscipit non amet?
+            </p>
+          </article>
         </section>
       </section>
-    </main>
-    <footer></footer>
-  </body>
+    </section>
+
+    <!--  responsável pela criação dos cards -->
+    <section class="cards-style">
+      <section class="cards-flex container-grid">
+        <div class="cards-style__flex">
+          <h2>
+            Local
+          </h2>
+
+          <div class="cards-style__box">
+            <h1>
+              São Paulo
+            </h1>
+          </div>
+        </div>
+        <div class="cards-style__flex">
+          <h2>
+            Duração
+          </h2>
+
+          <div class="cards-style__box">
+            <h1>
+              90 Dias
+            </h1>
+          </div>
+
+        </div>
+        <div class="cards-style__flex">
+          <h2>
+            Desafios
+          </h2>
+
+          <div class="cards-style__box">
+            <h1>
+              +30 Desafios
+            </h1>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- responsável pela criação do endereço  -->
+    <section class="address-style">
+      <section class="address-style__flex container-grid">
+        <div class="text-style">
+          <h1>
+            Endereço:
+          </h1>
+        </div>
+
+        <div class="box-style">
+          <p>
+            Rua moreira de godói, 226 - Ipiranga SP, 04266-060
+            <br>
+            Senai Automobilística
+          </p>
+
+          <img src="./assets/images/image 2.png" alt="">
+        </div>
+      </section>
+    </section>
+  </main>
+  <footer>
+    <p>
+      Copyright &copy; 2024 - Conde José Vicente de Azevedo
+    </p>
+  </footer>
+</body>
+
 </html>
