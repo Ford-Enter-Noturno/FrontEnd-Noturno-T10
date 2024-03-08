@@ -13,8 +13,6 @@
 .container-grid {
   margin: 0 auto;
   max-width: 1000px;
-
-  border: 2px solid white;
 }
 
 .header-flex {
@@ -69,12 +67,12 @@ a {
   flex-direction: column;
 }
 
-.text-flex > img {
+.text-flex>img {
   height: 400px;
   width: 80px;
 }
 
-.text-flex > h1 {
+.text-flex>h1 {
   font-size: 70px;
   color: white;
   font-family: "Bebas Neue", sans-serif;
@@ -87,7 +85,7 @@ hr {
   margin-bottom: 10px;
 }
 
-.text-flex > h2 {
+.text-flex>h2 {
   font-size: 40px;
   color: #f9003d;
   font-family: "Bebas Neue", sans-serif;
@@ -98,49 +96,155 @@ hr {
 
 .section-projects {
   background-color: #080324;
+  height: 520px;
 }
 
-.section-projects > h1 {
+.section-projects__style>h1 {
   font-size: 40px;
   color: #f9003d;
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 2px;
+  padding-top: 20px;
+  padding-bottom: 15px;
 }
 
 .flex-info {
   display: flex;
   justify-content: space-between;
-
-  border: 2px solid white;
+  align-items: center;
   width: 100%;
+}
+
+.flex-info>img {
+  height: 380px;
 }
 
 .info-style {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 500px;
+  height: 380px;
   color: white;
-
-  gap: 20px;
+  gap: 5px;
   justify-content: center;
 }
 
-.info-style > h4 {
-  font-size: 24px;
+.info-style>h4 {
+  font-size: 20px;
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
 }
 
-.info-style > h2 {
+.info-style>h2 {
   font-size: 40px;
   font-family: "Bebas Neue", sans-serif;
   color: #ffaf00;
   letter-spacing: 2px;
 }
 
-.info-style > p {
-  font-size: 20px;
+.info-style>p {
+  font-size: 18px;
   font-family: "Open Sans", sans-serif;
   text-align: justify;
   margin-right: 10px;
+}
+
+
+/* criação da section de cards */
+
+.cards-style {
+  background-image: url(../assets/images/imagem-fundo-info\ 1.png);
+}
+
+.cards-flex {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.cards-style__flex {
+  height: 140px;
+  width: 280px;
+}
+
+.cards-style__flex>h2 {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+}
+
+.cards-style__box {
+  border: 2px solid #A259F7;
+  height: 70%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards-style__box>h1 {
+  font-family: "Open Sans", sans-serif;
+  color: #A259F7;
+
+  font-size: 30px;
+}
+
+/* realizar estilização da última seção */
+
+.address-style {
+  background-image: url(../assets/images/imagem-fundo-ranking\ 2.png);
+  height: 500px;
+}
+
+.address-style__flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.text-style {
+  height: 60px;
+  width: 80%;
+}
+
+.text-style>h1 {
+  color: #ffaf00;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.box-style {
+  border: 2px solid #340B65;
+  background-color: #010010;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-style>p{
+  color: #A259F7;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  padding: 20px;
+}
+
+.box-style>img{
+  position: relative;
+
+  bottom: 50px;
+  right: 20px;
+}
+
+footer{
+  background-color: #f9003d;
+  color: white;
+  font-family:"Open Sans", sans-serif ;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 20px;
 }
