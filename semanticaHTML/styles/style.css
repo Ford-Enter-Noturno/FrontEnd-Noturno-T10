@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #D7D4FF;
+    padding: 40px;
+}
+
+.header-style {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-style__info {
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.header-style__info>h1 {
+    font-size: 2rem;
+}
+
+.header-style__info>p {
+    font-size: 1rem;
+    color: #555555;
+}
+
+.header-style__info>button {
+    width: 120px;
+    height: 50px;
+    color: white;
+    background-color: #6C63FF;
+    border-radius: 8px;
+    border: none;
+}
+
+.header-style__image>img {
+    width: 400px;
+    height: 250px;
+}
+
+/* Outra possibilidade */
+
+/* .header-style__image{
+    width: 400px;
+    height: 250px;
+} */
+/* .header-style__image>img{
+    width: 100%;
+    height: 100%;
+} */
+
+.main-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    padding: 50px;
+}
+
+/* seletor de atributo.  seleciona elementos que têm um atributo class no qual o valor começa com "card-style__bg". O operador ^= significa "começa com". */
+[class^="card-style__bg"] {
+    width: 100%;
+    height: 150px;
+}
+
+.card-style__bg1 {
+    background-color: #FF6363;
+}
+
+.card-style__bg2 {
+    background-color: #63ECFF;
+}
+
+.card-style__bg3 {
+    background-color: #F363FF;
+}
+
+.card-style__bg4 {
+    background-color: #63FF73;
+}
+
+.card-style__bg5 {
+    background-color: #FFDD63;
+}
+
+.card-style__bg6 {
+    background-color: #6663FF;
+}
+
+.card-style {
+    width: 250px;
+    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.135);
+}
+
+.card-style__infos {
+    padding: 20px;
+}
+
+.card-style__infos>p {
+    color: #555555;
+    margin-top: 15px;
+}
+
+.header-style__fixedheader{
+    display: none;
+}
+
+.header-style__links{
+    display: none;
+}
+
+/* regra - tipo de mídia - operador - media feature */
+@media screen and (max-width: 414px) {
+    .header-style {
+        flex-direction: column;
+        gap: 90px;
+    }
+
+    .header-style__info>p {
+        line-height: 30px;
+    }
+
+    header {
+        height: 100vh;
+        margin-top: 70px;
+    }
+
+    .main-card {
+        width: 80%;
+        padding: 0;
+        margin-top: 30px;
+    }
+
+    .header-style__fixedheader {
+        position: fixed;
+        background-color: #D7D4FF;
+        box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.199);
+        width: 100%;
+        height: 70px;
+        top: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .bi {
+        font-size: 40px;
+    }
+
+    .header-style__links {
+        width: 90%;
+        position: absolute;
+        background-color: white;
+        top: 70px;
+        left: 0;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: all 0.3s ease;
+        display: block;
+    }
+
+    .header-style__links.open {
+        transform: translateX(0%);   
+    }
+
+    .header-style__links>ul {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+
+    .header-style__links>ul>li>a {
+        text-decoration: none;
+        color: black;
+        transition: linear .4s all;
+    }
+
+    .header-style__links>ul>li>a:hover{
+        background-color: red;
+        padding: 20px;
+        border-radius: 8px;
+        color: white;
+    }
+
+}

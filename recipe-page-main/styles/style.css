@@ -142,7 +142,6 @@ table{
 }
 
 table,tr, td{
-    color: var();
     border-bottom: 1px solid var(--Nutmeg);
     border-collapse: collapse;
     padding: 15px;
