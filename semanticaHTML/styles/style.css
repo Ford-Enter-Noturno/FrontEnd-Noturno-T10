@@ -5,6 +5,13 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.theme-dark {
+    --backgroundColor: #141d2f;
+    --textIconColor: #ffffff;
+    --searchColor: #1E2A47;
+    --boxColor: #141D2F;
+}
+
 .container-grid {
     max-width: 1000px;
     margin: 0 auto;
@@ -115,19 +122,19 @@ header {
     margin-top: 15px;
 }
 
-.header-style__fixedheader{
+/* .header-style__fixedheader{
     display: none;
 }
 
 .header-style__links{
     display: none;
-}
+} */
 
 /* regra - tipo de mídia - operador - media feature */
 @media screen and (max-width: 414px) {
     .header-style {
         flex-direction: column;
-        gap: 90px;
+        /* gap: 90px; */
     }
 
     .header-style__info>p {
@@ -147,45 +154,56 @@ header {
 
     .header-style__fixedheader {
         position: fixed;
-        background-color: #D7D4FF;
-        box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.199);
-        width: 100%;
+        background-color: var(--searchColor);
+        box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.135);
         height: 70px;
+        width: 100%;
         top: 0;
         z-index: 9999;
         display: flex;
-        align-items: center;
         justify-content: space-between;
+        align-items: center;
         padding: 10px;
+    }
+
+    #handleNavbar{
+        background-color: transparent;
+        border: none;
     }
 
     .bi {
         font-size: 40px;
+        color: var(--textIconColor);
+    }
+
+    .bi-moon-fill{
+        font-size: 25px;
     }
 
     .header-style__links {
-        width: 90%;
-        position: absolute;
         background-color: white;
+        position: absolute;
         top: 70px;
         left: 0;
         height: 100vh;
+        width: 90%;
+        /* propriedades para realizar a animação dos links */
         transform: translateX(-100%);
         transition: all 0.3s ease;
         display: block;
     }
 
     .header-style__links.open {
-        transform: translateX(0%);   
+        transform: translateX(0%);
     }
 
     .header-style__links>ul {
         list-style-type: none;
         display: flex;
-        align-items: center;
         flex-direction: column;
-        justify-content: space-evenly;
         height: 100%;
+        align-items: center;
+        justify-content: space-evenly;
     }
 
     .header-style__links>ul>li>a {
@@ -194,11 +212,10 @@ header {
         transition: linear .4s all;
     }
 
-    .header-style__links>ul>li>a:hover{
+    .header-style__links>ul>li>a:hover {
         background-color: red;
-        padding: 20px;
         border-radius: 8px;
+        padding: 20px;
         color: white;
     }
-
 }
