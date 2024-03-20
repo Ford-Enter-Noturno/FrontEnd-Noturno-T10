@@ -2,19 +2,22 @@
 const headerLinks = document.querySelector(".header-style__links");
 const headerLinks2 = document.querySelector(".header-style__links2");
 
-function fecharTodosModais() {
-  headerLinks.classList.remove("open");
-  headerLinks2.classList.remove("open2");
-}
-
 function toggleModal1() {
-  fecharTodosModais();
-  headerLinks.classList.add("open");
+  if (headerLinks.classList.contains("open")) {
+    headerLinks.classList.remove("open");
+  } else {
+    headerLinks.classList.add("open");
+    headerLinks2.classList.remove("open2");
+  }
 }
 
 function toggleModal2() {
-  fecharTodosModais();
-  headerLinks2.classList.add("open2");
+  if (headerLinks2.classList.contains("open2")) {
+    headerLinks2.classList.remove("open2");
+  } else {
+    headerLinks2.classList.add("open2");
+    headerLinks.classList.remove("open");
+  }
 }
 
 document.getElementById("handleNavbar").addEventListener("click", toggleModal1);
@@ -23,23 +26,6 @@ document.getElementById("handleNavbar").addEventListener("click", toggleModal1);
 document
   .getElementById("handleNavbar2")
   .addEventListener("click", toggleModal2);
-
-// function fecharModais() {
-//     headerLinks.classList.remove("open");
-//     headerLinks2.classList.remove("open2");
-//   }
-
-//   // Ouvinte de evento para fechar o modal 1
-//   document.getElementById("handleNavbar").addEventListener("click", () => {
-//     headerLinks.classList.remove("open");
-//     fecharModais(); // Chamando a função para fechar ambos os modais
-//   });
-
-//   // Ouvinte de evento para fechar o modal 2
-//   document.getElementById("handleNavbar2").addEventListener("click", () => {
-//     headerLinks2.classList.remove("open2");
-//     fecharModais(); // Chamando a função para fechar ambos os modais
-//   });
 
 //Função para setar o tema no local storage do navegador
 function setTheme(theme) {

@@ -133,6 +133,10 @@ header {
     display: none;
 }
 
+.header-style__links2{
+    display: none;
+}
+
 /* regra - tipo de mídia - operador - media feature */
 @media screen and (max-width: 414px) {
     .header-style {
