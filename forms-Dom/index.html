@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script defer type="module" src="./script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="enviarDados(event)">
+        <div class="form-style">
+            <label for="name" >Informe seu primeiro nome</label>
+            <input type="text" placeholder="Ex: Guilherme Amorim" id="name">
+        </div>
+        <div class="form-style">
+            <label for="email" >Informe seu email</label>
+            <input type="email" placeholder="Ex: email@email.com" id="email">
+        </div>
+        <div class="form-style">
+            <label for="age" >Informe sua idade</label>
+            <input type="number" placeholder="Ex: 23" id="age">
+        </div>
+
+        <div class="buttons">
+            <button type="submit">
+                Cadastrar
+            </button>
+            <button type="reset">
+                Cancelar
+            </button>
+        </div>
+    </form>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+        <tbody  id="userList">  
+         
+        </tbody>
+    </table>
+</body>
+</html>
