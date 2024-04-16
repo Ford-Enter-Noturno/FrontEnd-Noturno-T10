@@ -139,9 +139,13 @@ header {
 
 /* regra - tipo de mídia - operador - media feature */
 @media screen and (max-width: 414px) {
+    body{
+        overflow-x: hidden;
+    }
+
     .header-style {
         flex-direction: column;
-        /* gap: 90px; */
+        gap: 90px;
     }
 
     .header-style__info>p {
@@ -241,7 +245,7 @@ header {
         height: 100vh;
         width: 90%;
         /* propriedades para realizar a animação dos links */
-        transform: translateX(110%);
+        transform: translateX(70%);
         transition: all 0.3s ease;
         display: block;
     }
