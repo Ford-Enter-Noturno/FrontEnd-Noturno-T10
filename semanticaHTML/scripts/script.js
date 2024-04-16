@@ -8,6 +8,7 @@ function toggleModal1() {
   } else {
     headerLinks.classList.add("open");
     headerLinks2.classList.remove("open2");
+
   }
 }
 
