@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Guilherme Amorim">
+    <title>CRUD</title>
+</head>
+
+<body>
+    <script>
+        let arrUsers = []
+
+        function showMenu() {
+            return parseInt(prompt(
+                `
+                 *********Menu*********
+                [1] -> Cadastrar usuário
+                [2] -> Visualizar usuário
+                [3] -> Atualizar usuário
+                [4] -> Deletar usuário
+                [5] -> Sair do programa
+                `
+            ));
+        }
+
+        //método: Método post (Verbo HTTP para cadastrar)
+        function addUser() {
+            const nome = prompt("Informe o nome do usuário: ");
+            const email = prompt("Informe o email do usuário: ");
+
+            if (!nome || !email) {
+                alert("o nome e o email são obrigatórios!")
+
+                return;
+            }
+
+            arrUsers.push({ nome, email });
+
+            console.log(arrUsers);
+        }
+
+        //Método de listagem de usuário => (Verbo HTTP: GET)
+        function listUser() {
+            let listUser = "";
+
+            arrUsers.forEach((dataUser) => {
+                listUser += `\nNome: ${dataUser.nome}, Email: ${dataUser.email}\n`
+            })
+
+            alert("Lista de usuários cadastrados " + listUser);
+        }
+
+        //Método de atualizar usuário => (Verbo HTPP: PUT)
+        function updateUserInfo() {
+            //nome a ser procurado dentro do array
+            const findEmail = prompt("Informe o email que você deseja atualizar: ")
+
+            //método find para validar se o email que o usuário informou está dentro do meu array de usuários
+            const usuarioEncontrado = arrUsers.find(user =>
+                user.email === findEmail
+            );
+
+            alert(usuarioEncontrado)
+
+            //se não encontrar nada então ele cai nessa validação, parando a nossa função
+            if (!usuarioEncontrado) {
+                alert("não encontrei nada");
+
+                return;
+            }
+
+            //se deu tudo certo, o sistema vai pedir para o usuário informar o novo nome e email a ser atualizado
+            const novoNome = prompt("Insira o novo nome: ");
+            const novoEmail = prompt("Informe o novo email: ");
+
+            //substitui o nome antigo pelo nome novo
+            if (novoNome) {
+                usuarioEncontrado.nome = novoNome;
+            }
+
+            //substitui o email antigo pelo email novo
+            if (novoEmail) {
+                usuarioEncontrado.email = novoEmail
+            }
+
+            //retorna que deu tudo certo
+            alert("Usuário foi atualizado com sucesso!")
+        }
+
+        //Método delete => (Verbo HTTP: Delete)
+        function deleteUser() {
+            const emailDelete = prompt("Informe o email que será deletado: ");
+
+            const emailDeleteFind = arrUsers.findIndex(email =>
+                email.email === emailDelete
+            );
+
+            const confirm = window.confirm("Você deseja remover o usuário " + emailDelete + "?");
+
+            if (confirm) {
+                arrUsers.splice(emailDeleteFind, -1);
+                alert("Usuário foi deletado com sucesso!")
+            } else {
+
+                alert("Usuário será mantido!")
+
+            }
+
+        }
+
+        let loopBreak = true
+
+        while (loopBreak) {
+            switch (showMenu()) {
+                case 1:
+                    addUser();
+                    break;
+                case 2:
+                    listUser();
+                    break;
+                case 3:
+                    updateUserInfo();
+                    break;
+                case 4:
+                    deleteUser();
+                    break;
+                case 5:
+                    alert("Saindo do programa... Até mais!")
+                    loopBreak = false
+                    break;
+
+                default:
+                    alert("Opção inválida");
+                    break;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -93,15 +93,40 @@
 
 //*****************sexto método - ForEach ***************/
 
-const forEachArray = []
-forEachArray.push({ nome: 'Guilherme', sobrenome: "Amorim", idade: 21, naturalidade: "Bahia" });
-forEachArray.push({ nome: 'Manuel', sobrenome: "Gomes", idade: 61, naturalidade: "Não sei" });
-console.log(forEachArray);
+// const forEachArray = []
+// forEachArray.push({ nome: 'Guilherme', sobrenome: "Amorim", idade: 21, naturalidade: "Bahia" });
+// forEachArray.push({ nome: 'Manuel', sobrenome: "Gomes", idade: 61, naturalidade: "Não sei" });
+// console.log(forEachArray);
 
-forEachArray.forEach((nomes) => {
-    console.log(`nome: ${nomes.nome}, sobrenome ${nomes.sobrenome}, idade: ${nomes.idade}`);
-});
+// forEachArray.forEach((nomes) => {
+//     console.log(`nome: ${nomes.nome}, sobrenome ${nomes.sobrenome}, idade: ${nomes.idade}`);
+// });
+
 
 //EXERCÍCIO - CRIE UM ARRAY QUE RECEBA NOMES (MIN 5 NOMES)
 //CRIE UM SEGUNDO ARRAY QUE RECEBA SOBRENOMES (MIN 5 SOBRENOMES)
 //UTILIZE MÉTODOS DE ARRAYS PARA EXIBIR OS DOIS ARRAYS EM UM SÓ, RETORNANDO O NOME E O SOBRENOME DA PESSOA DE ACORDO COM SEUS ÍNDICES
+
+//RESOLUÇÃO:
+const nome = ["Guilherme", 'Leandro', 'Drielly', 'Monica', 'Cassio']
+const sobrenome = ['Amorim', 'Leonardo', 'Santos', 'Reis', 'Ceiki']
+// const nomeCompleto = [];
+// nome.forEach((nome, indice) => {
+//     nomeCompleto.push(`${nome} ${sobrenome[indice]}`)
+// })
+
+// console.log(nomeCompleto);
+
+// for (let i = 0; i < nome.length; i++) {
+//     nomeCompleto.push(`${nome[i]} ${sobrenome[i]}`)
+
+// }
+
+console.log(nomeCompleto);
+
+const arrNomeSobrenome = nome.map((nome, indice) => {
+    return "nome: " + nome + " sobrenome: " + sobrenome[indice]
+});
+
+console.log(arrNomeSobrenome);
+
