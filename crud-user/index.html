@@ -97,10 +97,15 @@
                 email.email === emailDelete
             );
 
+            if (emailDeleteFind === -1) {
+                alert("Usuário não encontrado.");
+                return;
+            }
+
             const confirm = window.confirm("Você deseja remover o usuário " + emailDelete + "?");
 
             if (confirm) {
-                arrUsers.splice(emailDeleteFind, -1);
+                arrUsers.splice(emailDeleteFind, 1);
                 alert("Usuário foi deletado com sucesso!")
             } else {
 
