@@ -86,7 +86,7 @@ function createTableUser(dadosUsuario) {
                 <td> ${user.cityUser} </td>
                     <td>
                         <button type="button" class="button green" onclick="updateUser(${user.idUser})">Editar</button>
-                        <button type="button" class="button red">Excluir</button>
+                        <button type="button" class="button red" onclick="deleteUser(${user.idUser})">Excluir</button>
                     </td>
             </tr>
         `
@@ -97,7 +97,7 @@ function createTableUser(dadosUsuario) {
 
 function updateUser(id) {
     modalOpen();
-    
+
     document.getElementById('saveValues').removeEventListener('click', addUser);
 
     const textTitleUpdateUser = document.querySelector('h2');
@@ -114,12 +114,30 @@ function updateUser(id) {
     document.getElementById('cel').value = userData.celUser;
     document.getElementById('city').value = userData.cityUser;
 
-    document.getElementById('saveValues').addEventListener('click', updateUserInfo);
+    document.getElementById('saveValues').addEventListener('click', updateUserInfo(id));
 }
 
-function updateUserInfo() {
+function updateUserInfo(id) {
     const newName = document.getElementById('name').value;
     const newEmail = document.getElementById('email').value;
     const newCel = document.getElementById('cel').value;
     const newCity = document.getElementById('city').value;
+
+    const userList = JSON.parse(localStorage.getItem("CadastroUsuarios")) || []
+
+    const userIndexFind = userList.findIndex((user) => user.idUser == id)
+
+    if (userIndexFind !== -1) {
+        userList[userIndexFind].nomeUser = newName;
+        userList[userIndexFind].emailUser = newEmail;
+        userList[userIndexFind].celUser = newCel;
+        userList[userIndexFind].cityUser = newCity;
+
+        console.log(userList);
+
+        localStorage.setItem("CadastroUsuarios", JSON.stringify(userList));
+    }
+
+    // modalClose();
+    //window.location.reload();
 }
