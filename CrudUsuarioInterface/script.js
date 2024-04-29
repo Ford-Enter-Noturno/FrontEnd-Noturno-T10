@@ -3,6 +3,11 @@ function modalOpen() {
     document.getElementById('saveValues').innerText = 'Salvar';
 
     document.getElementById('modal').classList.add('active');
+
+    document.getElementById('name').value = "";
+    document.getElementById('email').value = "";
+    document.getElementById('cel').value = "";
+    document.getElementById('city').value = "";
 }
 
 function modalClose() {
@@ -71,7 +76,6 @@ window.addEventListener('DOMContentLoaded', carregarUsuario);
 
 //criar tabela
 function createTableUser(dadosUsuario) {
-    // console.log(dadosUsuario);
 
     let tabela = document.getElementById('corpoTabela');
 
@@ -114,7 +118,7 @@ function updateUser(id) {
     document.getElementById('cel').value = userData.celUser;
     document.getElementById('city').value = userData.cityUser;
 
-    document.getElementById('saveValues').addEventListener('click', updateUserInfo(id));
+    document.getElementById('saveValues').addEventListener('click', () => updateUserInfo(id));
 }
 
 function updateUserInfo(id) {
@@ -125,7 +129,7 @@ function updateUserInfo(id) {
 
     const userList = JSON.parse(localStorage.getItem("CadastroUsuarios")) || []
 
-    const userIndexFind = userList.findIndex((user) => user.idUser == id)
+    const userIndexFind = userList.findIndex((user) => user.idUser == id);
 
     if (userIndexFind !== -1) {
         userList[userIndexFind].nomeUser = newName;
@@ -138,6 +142,22 @@ function updateUserInfo(id) {
         localStorage.setItem("CadastroUsuarios", JSON.stringify(userList));
     }
 
-    // modalClose();
-    //window.location.reload();
+    modalClose();
+    window.location.reload();
+}
+
+function deleteUser(id) {
+    const getUserData = JSON.parse(localStorage.getItem("CadastroUsuarios"));
+
+    const findUser = getUserData.findIndex((user) => user.idUser == id);
+
+    console.log(findUser);
+
+    if (findUser !== -1) {
+        getUserData.splice(findUser, 1);
+
+        localStorage.setItem("CadastroUsuarios", JSON.stringify(getUserData));
+
+        window.location.reload();
+    }
 }
